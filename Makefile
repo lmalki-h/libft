@@ -6,7 +6,7 @@
 #    By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 14:33:27 by lmalki-h          #+#    #+#              #
-#    Updated: 2020/01/13 17:15:55 by lmalki-h         ###   ########.fr        #
+#    Updated: 2020/01/23 18:22:43 by lmalki-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC_NAME = ft_utoa.c \
 		   ft_isalnum.c \
 		   ft_isalpha.c \
 		   ft_isascii.c \
+		   replace.c \
 		   ft_isdigit.c \
 		   ft_isprint.c \
 		   ft_itoa.c \
@@ -39,6 +40,7 @@ SRC_NAME = ft_utoa.c \
 		   ft_strchr.c \
 		   ft_strdup.c \
 		   ft_strjoin.c \
+		   ft_strjoinfree.c \
 		   ft_strlcat.c \
 		   ft_strlcpy.c \
 		   ft_strlen.c \
@@ -54,6 +56,8 @@ SRC_NAME = ft_utoa.c \
 		   ft_itohex.c \
 		   capitalize.c \
 		   ft_isspace.c \
+		   add.c \
+		   contains.c \
 
 SRC_BONUS = ft_lstadd_back.c \
 			 ft_lstadd_front.c \

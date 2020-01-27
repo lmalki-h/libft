@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   replace.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/07 10:53:44 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/01/24 14:05:22 by lmalki-h         ###   ########.fr       */
+/*   Created: 2020/01/21 18:06:03 by lmalki-h          #+#    #+#             */
+/*   Updated: 2020/01/21 18:09:03 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	replace(char x, char y, char *tab)
 {
-	void	*ret;
+	int		i;
 
-	if ((ret = (void *)malloc(count * size)) == NULL)
-		return (NULL);
-	ft_bzero(ret, count * size);
-	return (ret);
+	i = 0;
+	while (tab[i] != '\0')
+	{
+		if (tab[i] == x)
+			tab[i] = y;
+		i++;
+	}
 }

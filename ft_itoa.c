@@ -6,13 +6,13 @@
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 16:38:18 by lmalki-h          #+#    #+#             */
-/*   Updated: 2019/11/07 17:32:44 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/01/27 14:11:13 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t		get_size(long int n)
+static size_t		get_size(intmax_t n)
 {
 	size_t	size;
 
@@ -29,7 +29,7 @@ static size_t		get_size(long int n)
 	return (size);
 }
 
-static	int			ft_isnegative(int n)
+static	int			ft_isnegative(intmax_t n)
 {
 	int		sign;
 
@@ -39,15 +39,15 @@ static	int			ft_isnegative(int n)
 	return (sign);
 }
 
-char				*ft_itoa(int n)
+char				*ft_itoa(intmax_t n)
 {
 	int			sign;
 	int			size;
 	char		*ret;
-	long int	num;
+	intmax_t	num;
 
-	num = (long int)n;
-	if ((sign = ft_isnegative(n)) == 1)
+	num = n;
+	if ((sign = ft_isnegative(num)) == 1)
 		num *= -1;
 	size = get_size(num);
 	if ((ret = ft_calloc(size + sign + 1, sizeof(char))) == NULL)

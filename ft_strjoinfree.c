@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoinfree.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/07 10:53:44 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/01/24 14:05:22 by lmalki-h         ###   ########.fr       */
+/*   Created: 2020/01/23 17:43:52 by lmalki-h          #+#    #+#             */
+/*   Updated: 2020/01/24 19:18:09 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char		*ft_strjoinfree(char *s1, char *s2, int n)
 {
-	void	*ret;
+	char	*p1;
+	char	*p2;
+	char	*s;
 
-	if ((ret = (void *)malloc(count * size)) == NULL)
-		return (NULL);
-	ft_bzero(ret, count * size);
-	return (ret);
+	p1 = s1;
+	p2 = s2;
+	s = ft_strjoin(s1, s2);
+	if (n == 1)
+		free(p1);
+	else if (n == 2)
+		free(p2);
+	else if (n == 3)
+	{
+		free(p1);
+		free(p2);
+	}
+	return (s);
 }

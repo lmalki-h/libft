@@ -6,13 +6,13 @@
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 18:14:27 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/01/13 17:16:48 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/01/24 17:03:44 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t		get_size(long int n)
+static size_t		get_size(intmax_t n)
 {
 	size_t	size;
 
@@ -29,7 +29,7 @@ static size_t		get_size(long int n)
 	return (size);
 }
 
-char				*ft_itohex(long int num)
+char				*ft_itohex(uintmax_t num)
 {
 	int			size;
 	char		*hex;
@@ -39,6 +39,8 @@ char				*ft_itohex(long int num)
 		return (NULL);
 	else
 	{
+		if (num == 0)
+			hex[0] = '0';
 		while (num > 0)
 		{
 			if ((num % 16) > 9)
