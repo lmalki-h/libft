@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contains.c                                         :+:      :+:    :+:   */
+/*   ft_patoi.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 12:13:53 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/01/27 15:59:49 by lmalki-h         ###   ########.fr       */
+/*   Created: 2020/01/31 17:20:12 by lmalki-h          #+#    #+#             */
+/*   Updated: 2020/01/31 17:20:34 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		contains(char c, const char *tab)
+int		ft_patoi(char **s)
 {
-	int		i;
+	int			sign;
+	long int	ret;
+	int			i;
 
+	sign = 1;
+	ret = 0;
 	i = 0;
-	while (tab[i] != '\0')
+	while (ft_isspace(**s))
+		(*s)++;
+	if (**s == '-' || **s == '+')
+		(*s)++;
+	while (ft_isdigit(**s))
 	{
-		if (c == tab[i])
-			return (1);
-		i++;
+		if (ret < 0 && sign == -1)
+			return (0);
+		else if (ret < 0 && sign == 1)
+			return (-1);
+		ret *= 10;
+		ret += (**s - '0');
+		(*s)++;
 	}
-	return (0);
+	return ((int)(ret * sign));
 }

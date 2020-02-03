@@ -6,7 +6,7 @@
 #    By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 14:33:27 by lmalki-h          #+#    #+#              #
-#    Updated: 2020/01/23 18:22:43 by lmalki-h         ###   ########.fr        #
+#    Updated: 2020/02/03 12:01:42 by lmalki-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,10 @@ SRC_NAME = ft_utoa.c \
 		   ft_isspace.c \
 		   add.c \
 		   contains.c \
+		   ft_putwchar_fd.c \
+		   ft_putwstr.c \
+		   ft_putwchar_utils.c \
+		   ft_patoi.c \
 
 SRC_BONUS = ft_lstadd_back.c \
 			 ft_lstadd_front.c \

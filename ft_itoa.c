@@ -6,11 +6,12 @@
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 16:38:18 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/01/27 14:11:13 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/01/27 15:29:31 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static size_t		get_size(intmax_t n)
 {
@@ -63,7 +64,7 @@ char				*ft_itoa(intmax_t n)
 			size--;
 		}
 		if (sign)
-			ret[size] = '-';
+			ret[0] = '-';
 	}
 	return (ret);
 }

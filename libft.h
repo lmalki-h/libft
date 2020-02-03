@@ -6,7 +6,7 @@
 /*   By: lmalki-h <lmalki-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:29:58 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/01/24 17:14:15 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/02/03 12:02:14 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+
+# define TWO_BYTES_F	192
+# define THREE_BYTES_F 	224
+# define FOUR_BYTES_F 	240
+# define REST_BYTES 	128
+# define SIX_UNITS		63
+# define TWELVE_UNITS	4095
 
 typedef struct		s_list
 {
@@ -75,4 +82,11 @@ char				*ft_utoa(uintmax_t n);
 void				add(char c, char *tab);
 int					contains(char c, const char *tab);
 char				*ft_strjoinfree(char *s1, char *s2, int n);
+int					count_bits(int c);
+int					get_bytes(int nb_bits);
+int					last_byte(int c);
+int					before_last_byte(int c);
+void				ft_putwchar_fd(int c, int fd);
+void				ft_putwstr(wchar_t *s, int fd);
+int					ft_patoi(char **s);
 #endif
