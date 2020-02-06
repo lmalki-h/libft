@@ -6,7 +6,7 @@
 #    By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 14:33:27 by lmalki-h          #+#    #+#              #
-#    Updated: 2020/02/03 12:01:42 by lmalki-h         ###   ########.fr        #
+#    Updated: 2020/02/03 18:14:06 by lmalki-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,6 @@ SRC_NAME = ft_utoa.c \
 		   add.c \
 		   contains.c \
 		   ft_putwchar_fd.c \
-		   ft_putwstr.c \
 		   ft_putwchar_utils.c \
 		   ft_patoi.c \
 

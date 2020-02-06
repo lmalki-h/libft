@@ -6,7 +6,7 @@
 /*   By: lmalki-h <lmalki-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:29:58 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/02/03 12:02:14 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/02/03 18:14:15 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,5 @@ int					get_bytes(int nb_bits);
 int					last_byte(int c);
 int					before_last_byte(int c);
 void				ft_putwchar_fd(int c, int fd);
-void				ft_putwstr(wchar_t *s, int fd);
 int					ft_patoi(char **s);
 #endif

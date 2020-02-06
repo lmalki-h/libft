@@ -6,13 +6,13 @@
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 18:14:27 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/01/24 17:03:44 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/02/05 19:17:02 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t		get_size(intmax_t n)
+static size_t		get_size(uintmax_t n)
 {
 	size_t	size;
 
