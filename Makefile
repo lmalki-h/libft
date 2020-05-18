@@ -61,9 +61,10 @@ SRC_NAME = ft_utoa.c \
 		   ft_putwchar_fd.c \
 		   ft_putwchar_utils.c \
 		   ft_patoi.c \
-
-SRC_BONUS = ft_lstadd_back.c \
-			 ft_lstadd_front.c \
+		   get_next_line.c \
+		   ft_lstcount.c \
+		   ft_lstadd_back.c \
+		 ft_lstadd_front.c \
 			 ft_lstclear.c \
 			 ft_lstdelone.c \
 			 ft_lstiter.c \
@@ -71,6 +72,12 @@ SRC_BONUS = ft_lstadd_back.c \
 			 ft_lstmap.c \
 			 ft_lstnew.c \
 			 ft_lstsize.c \
+			 ft_buffadd_back.c \
+			 ft_buffcount.c \
+			 ft_buffnew.c \
+			 ft_bufflast.c \
+			 inset.c \
+			 empty_line.c \
 
 OBJS = $(SRC_NAME:.$(EXT)=.o)	
 
@@ -81,7 +88,7 @@ $(NAME): $(OBJS)
 	ranlib $@
 
 clean:
-	/bin/rm -rf $(OBJS) $(OBJS_BONUS)
+	/bin/rm -rf $(OBJS)
 
 fclean: clean
 	/bin/rm -f $(NAME)

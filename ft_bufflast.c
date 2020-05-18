@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*   ft_bufflast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/13 14:48:13 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/01/24 19:13:35 by lmalki-h         ###   ########.fr       */
+/*   Created: 2019/11/08 13:38:02 by lmalki-h          #+#    #+#             */
+/*   Updated: 2019/11/18 10:32:15 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isspace(int c)
+t_buff		*ft_bufflast(t_buff *buff)
 {
-	if (c == ' '|| c == '\n')
-		return (1);
-	return (0);
+	t_buff	*last;
+
+	if (buff == NULL)
+		return (NULL);
+	last = buff;
+	while (last->next != NULL)
+		last = last->next;
+	return (last);
 }
