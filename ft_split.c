@@ -33,20 +33,6 @@ static size_t		word_count(char const *s, char c)
 	return (ret);
 }
 
-static	char		**free_tab(char **tab)
-{
-	int		i;
-
-	i = 0;
-	while (tab[i])
-	{
-		free(tab[i]);
-		i++;
-	}
-	if (tab)
-		free(tab);
-	return (NULL);
-}
 
 char				**ft_split(char const *s, char c)
 {

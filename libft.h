@@ -111,4 +111,5 @@ int			ft_buffcount(t_buff *buff);
 int			inset(int c, char *validchar);
 int			empty_line(char *line);
 double			distance(double start_x, double start_y, double end_x, double end_y);
+char			**free_tab(char **tab);
 #endif
