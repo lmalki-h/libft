@@ -78,6 +78,7 @@ SRC_NAME = ft_utoa.c \
 			 ft_bufflast.c \
 			 inset.c \
 			 empty_line.c \
+			 distance.c \
 
 OBJS = $(SRC_NAME:.$(EXT)=.o)	
 

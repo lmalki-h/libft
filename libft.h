@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-
+# include <math.h>
 # define TWO_BYTES_F	192
 # define THREE_BYTES_F 	224
 # define FOUR_BYTES_F 	240
@@ -110,4 +110,5 @@ t_buff			*ft_buffmap(t_buff *buff, void *(*f)(void *), void (*del)(void *));
 int			ft_buffcount(t_buff *buff);
 int			inset(int c, char *validchar);
 int			empty_line(char *line);
+double			distance(double start_x, double start_y, double end_x, double end_y);
 #endif
