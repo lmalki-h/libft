@@ -41,6 +41,6 @@ make
 
 
 ## Project status:
-My code is not the best but it was submitted as is. I will be adding functions to my library as I go farther in my school program. 
+I will be adding functions to my library as I go farther in my school program. 
 
 
