@@ -6,7 +6,7 @@
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 16:56:31 by lmalki-h          #+#    #+#             */
-/*   Updated: 2019/12/11 13:39:21 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/06/09 15:29:02 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void		free_lst(t_list **alst, int fd)
 {
-	t_list		*curr;
-	t_list		*prev;
+	t_list	*curr;
+	t_list	*prev;
 
 	curr = *alst;
 	if ((*alst)->fd == fd)
@@ -40,7 +40,7 @@ void		free_lst(t_list **alst, int fd)
 	}
 }
 
-int			ft_strncut(t_list *lst, char **line, int ret, t_list **alst)
+int		ft_strncut(t_list *lst, char **line, int ret, t_list **alst)
 {
 	char	*delim;
 
@@ -96,7 +96,7 @@ char		*ft_update(char *s1, char *s2)
 
 t_list		*get_lst(int fd, t_list **alst)
 {
-	t_list		*tmp;
+	t_list	*tmp;
 
 	tmp = *alst;
 	while (tmp)
@@ -115,13 +115,13 @@ t_list		*get_lst(int fd, t_list **alst)
 	return (tmp);
 }
 
-int			get_next_line(int fd, char **line)
+int		get_next_line(int fd, char **line)
 {
-	char				buf[BUFFER_SIZE + 1];
-	static t_list			*alst;
-	t_list				*lst;
-	int				ret;
-	int				ret2;
+	char		buf[BUFFER_SIZE + 1];
+	static t_list	*alst;
+	t_list		*lst;
+	int		ret;
+	int		ret2;
 
 	if (fd < 0 || !line || read(fd, buf, 0) < 0 || BUFFER_SIZE < 1)
 		return (-1);

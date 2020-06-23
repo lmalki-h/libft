@@ -1,6 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   distance.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lmalki-h <lmalki-h@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/09 15:07:47 by lmalki-h          #+#    #+#             */
+/*   Updated: 2020/06/17 10:34:48 by lmalki-h         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-double	distance(double start_x, double start_y, double end_x, double end_y)
+int	distance(int x1, int y1, int x2, int y2)
 {
-	return (sqrt((start_x - end_x) *(start_x - end_x) + (start_y - end_y) * (start_y - end_y)));
+	int result;
+
+	result = sqrt((x1 - x2) * (x1 - x2)
+	+ (y1 - y2) * (y1 - y2));
+	return (result);
 }

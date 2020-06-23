@@ -6,7 +6,7 @@
 /*   By: lmalki-h <lmalki-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:29:58 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/02/03 18:14:15 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/06/17 10:33:53 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # define TWELVE_UNITS	4095
 
 # define BUFFER_SIZE	1
+
 typedef struct		s_list
 {
 	void		*content;
@@ -53,7 +54,8 @@ size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
-char			*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char			*ft_strnstr(const char *haystack, const char *needle,
+size_t len);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
@@ -83,7 +85,8 @@ void			ft_lstadd_back(t_list **alst, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
-t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
+void (*del)(void *));
 int			ft_lstcount(t_list *lst);
 char			*ft_utoa(uintmax_t n);
 void			add(char c, char *tab);
@@ -96,8 +99,6 @@ int			before_last_byte(int c);
 void			ft_putwchar_fd(int c, int fd);
 int			ft_patoi(char **s);
 int			get_next_line(int fd, char **line);
-
-
 t_buff			*ft_buffnew(char *content);
 void			ft_buffadd_front(t_buff **abuff, t_buff *new);
 int			ft_buffsize(t_buff *buff);
@@ -106,10 +107,11 @@ void			ft_buffadd_back(t_buff **abuff, t_buff *new);
 void			ft_buffdelone(t_buff *buff, void (*del)(void *));
 void			ft_buffclear(t_buff **buff, void (*del)(void *));
 void			ft_buffiter(t_buff *buff, void (*f)(void *));
-t_buff			*ft_buffmap(t_buff *buff, void *(*f)(void *), void (*del)(void *));
+t_buff			*ft_buffmap(t_buff *buff, void *(*f)(void *),
+void (*del)(void *));
 int			ft_buffcount(t_buff *buff);
 int			inset(int c, char *validchar);
 int			empty_line(char *line);
-double			distance(double start_x, double start_y, double end_x, double end_y);
+//int			distance(int x1, int y1,int x2, int y2);
 char			**free_tab(char **tab);
 #endif
