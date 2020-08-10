@@ -6,7 +6,7 @@
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 15:28:36 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/01/09 12:42:50 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/07/23 20:06:28 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if (s)
 	{
-		while (*s)
-		{
-			ft_putchar_fd(*s, fd);
-			s++;
-		}
+		write(fd, s, ft_strlen(s));
 	}
 }
