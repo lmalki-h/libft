@@ -6,7 +6,7 @@
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 13:07:11 by lmalki-h          #+#    #+#             */
-/*   Updated: 2019/11/14 17:39:22 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/08/19 07:59:12 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list		*ft_lstnew(void *content)
 
 	if ((new = ft_calloc(1, sizeof(t_list))) == NULL)
 		return (NULL);
-	new->content = content;
+	new->content = ft_strdup(content);
 	new->next = NULL;
 	return (new);
 }

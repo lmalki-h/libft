@@ -6,7 +6,7 @@
 /*   By: lmalki-h <lmalki-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:29:58 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/06/24 20:19:07 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/08/19 07:59:01 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <math.h>
+# include <stdio.h>
 # define TWO_BYTES_F	192
 # define THREE_BYTES_F 	224
 # define FOUR_BYTES_F 	240
@@ -114,4 +115,6 @@ int			inset(int c, char *validchar);
 int			empty_line(char *line);
 //int			distance(int x1, int y1,int x2, int y2);
 char			**free_tab(char **tab);
+int			end_with(char *file_name, char const *end);
+int			rgb_to_int(int red, int green, int blue);
 #endif

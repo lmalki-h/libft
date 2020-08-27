@@ -6,7 +6,7 @@
 #    By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 14:33:27 by lmalki-h          #+#    #+#              #
-#    Updated: 2020/02/03 18:14:06 by lmalki-h         ###   ########.fr        #
+#    Updated: 2020/08/12 10:59:40 by lmalki-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,6 +80,8 @@ SRC_NAME = ft_utoa.c \
 			 empty_line.c \
 			 distance.c \
 			 free_tab.c \
+			 end_with.c \
+			rgb_to_int.c \
 
 OBJS = $(SRC_NAME:.$(EXT)=.o)	
 
