@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdint.h>
 # include <math.h>
 # define TWO_BYTES_F	192
 # define THREE_BYTES_F 	224

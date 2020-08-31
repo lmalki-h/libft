@@ -16,11 +16,9 @@ int		ft_patoi(char **s)
 {
 	int			sign;
 	long int	ret;
-	int			i;
 
 	sign = 1;
 	ret = 0;
-	i = 0;
 	while (ft_isspace(**s))
 		(*s)++;
 	if (**s == '-' || **s == '+')

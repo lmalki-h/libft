@@ -15,7 +15,6 @@
 void		free_lst(t_list **alst, int fd)
 {
 	t_list	*curr;
-	t_list	*prev;
 
 	curr = *alst;
 	if ((*alst)->fd == fd)
@@ -28,13 +27,11 @@ void		free_lst(t_list **alst, int fd)
 	{
 		while (curr != NULL && curr->fd == fd)
 		{
-			prev = curr;
 			curr = curr->next;
 		}
 		if (curr != NULL)
 		{
 			free(curr->content);
-			prev = curr->next;
 			free(curr);
 		}
 	}
