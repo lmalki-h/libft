@@ -34,12 +34,11 @@ typedef struct		s_list
 	struct s_list	*next;
 }			t_list;
 
-typedef struct		s_buff
+typedef struct		s_coord
 {
-	char		*content;
-	struct s_buff	*next;
-}			t_buff;
-
+	double		x;
+	double		y;
+}			t_coord;
 void			replace(char x, char y, char *tab);
 void			capitalize(char *s);
 int			ft_atoi(const char *str);
@@ -101,17 +100,6 @@ int			before_last_byte(int c);
 void			ft_putwchar_fd(int c, int fd);
 int			ft_patoi(char **s);
 int			get_next_line(int fd, char **line);
-t_buff			*ft_buffnew(char *content);
-void			ft_buffadd_front(t_buff **abuff, t_buff *new);
-int			ft_buffsize(t_buff *buff);
-t_buff			*ft_bufflast(t_buff *buff);
-void			ft_buffadd_back(t_buff **abuff, t_buff *new);
-void			ft_buffdelone(t_buff *buff, void (*del)(void *));
-void			ft_buffclear(t_buff **buff, void (*del)(void *));
-void			ft_buffiter(t_buff *buff, void (*f)(void *));
-t_buff			*ft_buffmap(t_buff *buff, void *(*f)(void *),
-void (*del)(void *));
-int			ft_buffcount(t_buff *buff);
 int			inset(int c, char *validchar);
 int			empty_line(char *line);
 double			distance(t_coord a, t_coord b);

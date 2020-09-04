@@ -16,8 +16,8 @@ double	distance(t_coord a, t_coord b)
 {
 	double	distance;
 
-	if (b.x < 0 || b.y < 0)
-		return (INT_MAX);
+//	if (b.x < 0 || b.y < 0)
+//		return (INT_MAX);
 	distance = hypot((a.x - b.x), (a.y - b.y));
 	return (distance);
 }

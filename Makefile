@@ -72,10 +72,6 @@ SRC_NAME = ft_utoa.c \
 			 ft_lstmap.c \
 			 ft_lstnew.c \
 			 ft_lstsize.c \
-			 ft_buffadd_back.c \
-			 ft_buffcount.c \
-			 ft_buffnew.c \
-			 ft_bufflast.c \
 			 inset.c \
 			 empty_line.c \
 			 distance.c \

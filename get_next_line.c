@@ -53,11 +53,14 @@ int		ft_strncut(t_list *lst, char **line, int ret, t_list **alst)
 	{
 		if (ret == 0)
 		{
-			if ((*line = ft_substr(lst->content, 0,
+			if (*line)
+			{
+				if ((*line = ft_substr(lst->content, 0,
 							ft_strlen(lst->content))) == NULL)
 				return (-1);
-			free_lst(alst, lst->fd);
 			return (0);
+			}
+			free_lst(alst, lst->fd);
 		}
 	}
 	return (0);
@@ -72,7 +75,7 @@ char		*ft_update(char *s1, char *s2)
 	char	*s;
 
 	len_s1 = ft_strlen(s1);
-	len_s2 = ft_strlen(s2);
+	len_s2 = ft_strlen(s2);	
 	i = 0;
 	if ((s = (char *)ft_calloc(len_s1 + len_s2 + 1, sizeof(char))) == NULL)
 		return (NULL);
