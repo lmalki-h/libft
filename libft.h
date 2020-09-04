@@ -6,7 +6,7 @@
 /*   By: lmalki-h <lmalki-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:29:58 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/08/19 07:59:01 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/09/04 14:18:26 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ void (*del)(void *));
 int			ft_buffcount(t_buff *buff);
 int			inset(int c, char *validchar);
 int			empty_line(char *line);
-double	distance(t_coord a, t_coord b);
+double			distance(t_coord a, t_coord b);
 char			**free_tab(char **tab);
 int			end_with(char *file_name, char const *end);
 int			rgb_to_int(int red, int green, int blue);
