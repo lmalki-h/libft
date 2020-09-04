@@ -12,11 +12,12 @@
 
 #include "libft.h"
 
-int	distance(int x1, int y1, int x2, int y2)
+double	distance(t_coord a, t_coord b)
 {
-	int result;
+	double	distance;
 
-	result = sqrt((x1 - x2) * (x1 - x2)
-	+ (y1 - y2) * (y1 - y2));
-	return (result);
+	if (b.x < 0 || b.y < 0)
+		return (INT_MAX);
+	distance = hypot((a.x - b.x), (a.y - b.y));
+	return (distance);
 }

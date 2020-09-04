@@ -82,8 +82,10 @@ SRC_NAME = ft_utoa.c \
 			 free_tab.c \
 			 end_with.c \
 			rgb_to_int.c \
+			valid_color.c \
 
-OBJS = $(SRC_NAME:.$(EXT)=.o)	
+
+OBJS = $(SRC_NAME:.$(EXT)=.o)
 
 all: $(NAME)
 

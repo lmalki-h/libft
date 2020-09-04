@@ -113,8 +113,9 @@ void (*del)(void *));
 int			ft_buffcount(t_buff *buff);
 int			inset(int c, char *validchar);
 int			empty_line(char *line);
-//int			distance(int x1, int y1,int x2, int y2);
+double	distance(t_coord a, t_coord b);
 char			**free_tab(char **tab);
 int			end_with(char *file_name, char const *end);
 int			rgb_to_int(int red, int green, int blue);
+int			valid_color(int r, int g, int b);
 #endif
