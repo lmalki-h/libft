@@ -39,6 +39,7 @@ typedef struct		s_coord
 	double		x;
 	double		y;
 }			t_coord;
+
 void			replace(char x, char y, char *tab);
 void			capitalize(char *s);
 int			ft_atoi(const char *str);
@@ -107,4 +108,9 @@ char			**free_tab(char **tab);
 int			end_with(char *file_name, char const *end);
 int			rgb_to_int(int red, int green, int blue);
 int			valid_color(int r, int g, int b);
+void			free_lst(t_list *alst);
+void			free_2darray(char **array);
+int			has_valid_characters(char *line, char *validcharacters);
+int			return_error(char *message);
+int			exit_error(char *message);
 #endif

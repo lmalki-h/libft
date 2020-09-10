@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void		free_lst(t_list **alst, int fd)
+static void		free_lst_with_fd(t_list **alst, int fd)
 {
 	t_list	*curr;
 
@@ -53,14 +53,10 @@ int		ft_strncut(t_list *lst, char **line, int ret, t_list **alst)
 	{
 		if (ret == 0)
 		{
-			if (*line)
-			{
-				if ((*line = ft_substr(lst->content, 0,
-							ft_strlen(lst->content))) == NULL)
+			if ((*line = ft_substr(lst->content, 0, ft_strlen(lst->content))) == NULL)
 				return (-1);
+			free_lst_with_fd(alst, lst->fd);
 			return (0);
-			}
-			free_lst(alst, lst->fd);
 		}
 	}
 	return (0);

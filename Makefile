@@ -79,6 +79,11 @@ SRC_NAME = ft_utoa.c \
 			 end_with.c \
 			rgb_to_int.c \
 			valid_color.c \
+			free_lst.c \
+			free_2darray.c \
+			valid_characters.c \
+			return_error.c \
+			exit_error.c \
 
 
 OBJS = $(SRC_NAME:.$(EXT)=.o)
