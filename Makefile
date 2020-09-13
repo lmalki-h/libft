@@ -84,6 +84,9 @@ SRC_NAME = ft_utoa.c \
 			valid_characters.c \
 			return_error.c \
 			exit_error.c \
+			droite.c \
+			inter2d.c \
+			perpendiculaire.c \
 
 
 OBJS = $(SRC_NAME:.$(EXT)=.o)
