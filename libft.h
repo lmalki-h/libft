@@ -113,4 +113,7 @@ void			free_2darray(char **array);
 int			has_valid_characters(char *line, char *validcharacters);
 int			return_error(char *message);
 int			exit_error(char *message);
+t_coord			droite(t_coord point1, t_coord point2);
+t_coord			perpendiculaire(t_coord droite, t_coord intersection);
+t_coord			inter2d(t_coord droite1, t_coord droite2);
 #endif
