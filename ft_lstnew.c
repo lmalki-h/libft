@@ -18,8 +18,7 @@ t_list		*ft_lstnew(void *content)
 
 	if ((new = ft_calloc(1, sizeof(t_list))) == NULL)
 		return (NULL);
-	new->content = ft_strdup((char *)content);
-	free(content);
+	new->content = ft_strdup(content);
 	new->next = NULL;
 	return (new);
 }
