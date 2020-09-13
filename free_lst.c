@@ -10,6 +10,7 @@ void	free_lst(t_list *alst)
 	{
 		to_free = curr;
 		curr = curr->next;
+		free(to_free->content);
 		free(to_free);
 		to_free = NULL;
 	}
