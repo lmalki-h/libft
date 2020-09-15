@@ -14,15 +14,13 @@
 
 void	free_2darray(char **array)
 {
-	char	*curr;
-	char	*to_free;
+	int		i;
 
-	curr = *array;
-	while (curr != NULL)
+	i = 0;
+	while (array[i])
 	{
-		to_free = curr;
-		curr++;
-		free(to_free);
+		free(array[i]);
+		i++;
 	}
-	array = NULL;
+	free(array);
 }
