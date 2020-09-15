@@ -6,7 +6,7 @@
 /*   By: lmalki-h <lmalki-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 15:20:18 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/06/09 15:34:24 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/09/14 09:56:45 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_lstcount(t_list *lst)
 {
-	int	count;
+	int		count;
 	t_list	*tmp;
 
 	if (lst == NULL)

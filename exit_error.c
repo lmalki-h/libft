@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   exit_error.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lmalki-h <lmalki-h@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/14 09:43:20 by lmalki-h          #+#    #+#             */
+/*   Updated: 2020/09/14 09:46:58 by lmalki-h         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int		exit_error(char *message)
 {
-		write(1, message, ft_strlen(message));
-		exit(0);
+	write(1, message, ft_strlen(message));
+	exit(0);
 }
-

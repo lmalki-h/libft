@@ -6,13 +6,13 @@
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 16:56:31 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/06/09 15:29:02 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/09/14 09:46:30 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		free_lst_with_fd(t_list **alst, int fd)
+void		free_lst_with_fd(t_list **alst, int fd)
 {
 	t_list	*curr;
 
@@ -37,7 +37,7 @@ static void		free_lst_with_fd(t_list **alst, int fd)
 	}
 }
 
-int		ft_strncut(t_list *lst, char **line, int ret, t_list **alst)
+int			ft_strncut(t_list *lst, char **line, int ret, t_list **alst)
 {
 	char	*delim;
 
@@ -53,7 +53,8 @@ int		ft_strncut(t_list *lst, char **line, int ret, t_list **alst)
 	{
 		if (ret == 0)
 		{
-			if ((*line = ft_substr(lst->content, 0, ft_strlen(lst->content))) == NULL)
+			if ((*line = ft_substr(lst->content, 0, ft_strlen(lst->content)))
+				== NULL)
 				return (-1);
 			free_lst_with_fd(alst, lst->fd);
 			return (0);
@@ -71,7 +72,7 @@ char		*ft_update(char *s1, char *s2)
 	char	*s;
 
 	len_s1 = ft_strlen(s1);
-	len_s2 = ft_strlen(s2);	
+	len_s2 = ft_strlen(s2);
 	i = 0;
 	if ((s = (char *)ft_calloc(len_s1 + len_s2 + 1, sizeof(char))) == NULL)
 		return (NULL);
@@ -111,13 +112,13 @@ t_list		*get_lst(int fd, t_list **alst)
 	return (tmp);
 }
 
-int		get_next_line(int fd, char **line)
+int			get_next_line(int fd, char **line)
 {
-	char		buf[BUFFER_SIZE + 1];
-	static t_list	*alst;
-	t_list		*lst;
-	int		ret;
-	int		ret2;
+	char				buf[BUFFER_SIZE + 1];
+	static t_list		*alst;
+	t_list				*lst;
+	int					ret;
+	int					ret2;
 
 	if (fd < 0 || !line || read(fd, buf, 0) < 0 || BUFFER_SIZE < 1)
 		return (-1);

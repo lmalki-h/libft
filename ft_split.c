@@ -6,16 +6,16 @@
 /*   By: lmalki-h <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 11:03:52 by lmalki-h          #+#    #+#             */
-/*   Updated: 2020/06/09 16:04:53 by lmalki-h         ###   ########.fr       */
+/*   Updated: 2020/09/14 09:59:30 by lmalki-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	word_count(char const *s, char c)
+size_t		word_count(char const *s, char c)
 {
-	size_t	ret;
-	int	i;
+	size_t		ret;
+	int			i;
 
 	ret = 0;
 	i = 0;
@@ -35,10 +35,10 @@ static size_t	word_count(char const *s, char c)
 
 char		**ft_split(char const *s, char c)
 {
-	char	**tab;
-	char	*curr;
-	char	*delim;
-	size_t	i;
+	char		**tab;
+	char		*curr;
+	char		*delim;
+	size_t		i;
 
 	i = 0;
 	if (!s || (tab = ft_calloc(word_count(s, c) + 1, sizeof(char *))) == NULL)
